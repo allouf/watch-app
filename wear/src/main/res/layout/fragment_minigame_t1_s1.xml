@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.incentives.prototype.CustomScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="2dp"
+    android:id="@+id/scrollViewT1S1"
+    tools:context=".minigameT1.MinigameT1S1Fragment"
+    android:paddingRight="2dp">
+
+        <LinearLayout
+            android:id="@+id/layout_content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/avatar_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="Andrius"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:textColor="@color/white"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/avatar"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            app:civ_border_width="2dp"
+                            app:civ_border_color="#FF000000"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/avatar_name" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/layout_progressbars">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/arrowBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_gravity="bottom|end"
+                    app:lottie_fileName="right-arrow-white.json" />
+
+                <ViewAnimator
+                    android:id="@+id/viewAnimator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-47dp"
+                    android:animateFirstView="false">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/first">
+
+                                <TextView
+                                    android:id="@+id/txtTitle"
+                                    android:layout_width="130dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginTop="16dp"
+                                    android:text="Add Ideas"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.47"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/white"
+                                    android:layout_marginRight="45dp"
+                                    android:layout_marginLeft="0dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/txtTitle"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/recycler_view1"></View>
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recycler_view1"
+                                    android:layout_width="183dp"
+                                    android:layout_height="220dp"
+                                    android:background="#000"
+                                    android:padding="5dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:scrollbars="vertical"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.492"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+                                    app:layout_constraintVertical_bias="0.0"
+                                    android:divider="?android:absListViewStyle"
+                                    android:showDividers="end"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/second">
+
+                                <TextView
+                                    android:id="@+id/txtTitle2"
+                                    android:layout_width="130dp"
+                                    android:layout_height="32dp"
+                                    android:layout_marginTop="16dp"
+                                    android:text="Add Ideas"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.47"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/white"
+                                    android:layout_marginRight="45dp"
+
+                                    android:layout_marginLeft="0dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/txtTitle2"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/recycler_view2"></View>
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recycler_view2"
+                                    android:layout_width="183dp"
+                                    android:layout_height="220dp"
+                                    android:layout_marginTop="3dp"
+                                    android:background="#000"
+                                    android:padding="5dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:scrollbars="vertical"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.492"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtTitle2"
+                                    app:layout_constraintVertical_bias="0.0"
+                                    android:divider="?android:absListViewStyle"
+                                    android:showDividers="end"/>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                </ViewAnimator>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/contentMain">
+
+                        <TextView
+                            android:id="@+id/txtTitleSpace"
+                            android:layout_width="120dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Mini - Game"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textFontWeight="400"
+                            android:textSize="18dp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="220dp"
+                    android:layout_height="4dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@color/white"
+
+                    ></View>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/phase">
+
+                        <TextView
+                            android:id="@+id/label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start|bottom"
+                            android:singleLine="true"
+                            android:text="EXPRESSING"
+                            android:textColor="@color/white"
+                            android:textFontWeight="500"
+                            android:textSize="16dp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toTopOf="@+id/levelProgressBar"
+                            app:layout_constraintStart_toStartOf="@+id/levelProgressBar"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="end|bottom"
+                            android:textSize="16dp"
+                            android:text="lvl 3"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toTopOf="@+id/levelProgressBar"
+                            app:layout_constraintEnd_toEndOf="@+id/levelProgressBar"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ProgressBar
+                            android:id="@+id/levelProgressBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="140dp"
+                            android:layout_height="12dp"
+                            android:layout_centerHorizontal="true"
+                            android:min="0"
+                            android:progress="70"
+                            android:progressDrawable="@drawable/custom_progress"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/label" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/mainAnimationView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp"
+                            android:layout_centerInParent="true"
+                            android:elevation="8dp" />
+
+                        <ImageView
+                            android:id="@+id/glowAnimationView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="170dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/glow" />
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:layout_width="226dp"
+                    android:layout_height="match_parent"
+                    android:padding="0dp">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+
+                                <TextView
+                                    android:id="@+id/txtViewTimer"
+                                    android:layout_width="145dp"
+                                    android:layout_height="30dp"
+                                    android:paddingTop="0dp"
+                                    android:text="55H 45M 59SEC"
+                                    android:layout_marginLeft="65dp"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    app:layout_constraintEnd_toStartOf="@+id/stopWatch"
+                                    app:layout_constraintHorizontal_bias="0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageButton
+                                    android:id="@+id/stopWatch"
+                                    android:layout_width="21dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginRight="65dp"
+                                    android:layout_marginTop="6dp"
+                                    android:foregroundGravity="left"
+                                    android:background="@drawable/stopwatch"
+                                    app:layout_constraintBottom_toBottomOf="@+id/txtViewTimer"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toEndOf="@+id/txtViewTimer"
+                                    app:layout_constraintTop_toTopOf="@+id/txtViewTimer"
+                                    app:layout_constraintVertical_bias="0.0" />
+
+                                <ProgressBar
+                                    android:id="@+id/simpleProgressBar"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="184dp"
+                                    android:layout_height="12dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:min="0"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/custom_progress_t1s1"
+                                    android:visibility="visible"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtViewTimer" />
+
+                                <ImageButton
+                                    android:id="@+id/btnPause"
+                                    android:layout_width="41dp"
+                                    android:layout_height="34dp"
+                                    android:layout_marginTop="4dp"
+                                    android:background="@android:drawable/ic_media_pause"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.57"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/btnStart"
+                                    app:layout_constraintTop_toBottomOf="@+id/simpleProgressBar" />
+
+                                <ImageButton
+                                    android:id="@+id/btnStart"
+                                    android:layout_width="41dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginTop="4dp"
+                                    android:background="@android:drawable/ic_media_play"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/simpleProgressBar" />
+
+                                <ImageButton
+                                    android:id="@+id/btnStop"
+                                    android:layout_width="37dp"
+                                    android:layout_height="38dp"
+                                    android:layout_marginTop="4dp"
+                                    android:background="@drawable/ic_cc_clear"
+                                    app:layout_constraintEnd_toStartOf="@+id/btnStart"
+                                    app:layout_constraintHorizontal_bias="0.450"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/simpleProgressBar" />
+
+                                <ImageButton
+                                    android:id="@+id/btnToT1S2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/arrow"
+                                    app:layout_constraintHorizontal_bias="0.496"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/btnPause" />
+
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/lvlViewTxt222"
+                    android:layout_width="184dp"
+                    android:layout_height="36dp"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="10dp"
+                    android:text="Sam              lvl 3"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.487"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="invisible"/>
+        </LinearLayout>
+
+    </com.incentives.prototype.CustomScrollView>
+

@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/page2Layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <!-- Add Groups of components here for Page 2 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phase1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/flip1"
+            android:src="@drawable/memories"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="13dp"
+            android:paddingBottom="3dp"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout1"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Name1"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="start|bottom"
+            android:singleLine="true"
+            android:text="Dreams"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16dp"
+            android:layout_marginLeft="4dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/Level1"
+            app:layout_constraintStart_toEndOf="@+id/flip1"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Level1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="end|bottom"
+            android:text="lvl 2"
+            android:layout_marginRight="13dp"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayout1"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Name1">
+
+            <ProgressBar
+                android:id="@+id/levelProgressBar1"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:min="0"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:progress="70"
+                android:progressDrawable="@drawable/custom_progress"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/text_over_progress1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="3/5"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phase2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/flip2"
+            android:src="@drawable/target"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="13dp"
+            android:paddingBottom="3dp"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout2"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Name2"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="start|bottom"
+            android:singleLine="true"
+            android:text="Goals"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16dp"
+            android:layout_marginLeft="4dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/Level2"
+            app:layout_constraintStart_toEndOf="@+id/flip2"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Level2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="end|bottom"
+            android:text="lvl 2"
+            android:layout_marginRight="13dp"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayout2"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Name2">
+
+            <ProgressBar
+                android:id="@+id/levelProgressBar2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:min="0"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:progress="70"
+                android:progressDrawable="@drawable/custom_progress"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/text_over_progress2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="3/5"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phase3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/flip3"
+            android:src="@drawable/rules"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="13dp"
+            android:paddingBottom="3dp"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout3"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Name3"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="start|bottom"
+            android:singleLine="true"
+            android:text="Rules"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16dp"
+            android:layout_marginLeft="4dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/Level3"
+            app:layout_constraintStart_toEndOf="@+id/flip3"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Level3"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="end|bottom"
+            android:text="lvl 2"
+            android:layout_marginRight="13dp"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayout3"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <FrameLayout
+            android:id="@+id/frameLayout3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Name3">
+
+            <ProgressBar
+                android:id="@+id/levelProgressBar3"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:min="0"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:progress="70"
+                android:progressDrawable="@drawable/custom_progress"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/text_over_progress3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="3/5"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phase4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/flip4"
+            android:src="@drawable/dreaming"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="13dp"
+            android:paddingBottom="3dp"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout4"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Name4"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="start|bottom"
+            android:singleLine="true"
+            android:text="Memories"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16dp"
+            android:layout_marginLeft="4dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/Level4"
+            app:layout_constraintStart_toEndOf="@+id/flip4"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Level4"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="end|bottom"
+            android:text="lvl 2"
+            android:layout_marginRight="13dp"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayout4"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <FrameLayout
+            android:id="@+id/frameLayout4"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Name4">
+
+            <ProgressBar
+                android:id="@+id/levelProgressBar4"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:min="0"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:progress="70"
+                android:progressDrawable="@drawable/custom_progress"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/text_over_progress4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="3/5"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phase5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/flip5"
+            android:src="@drawable/question"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="13dp"
+            android:paddingBottom="3dp"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout5"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Name5"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="start|bottom"
+            android:singleLine="true"
+            android:text="Quesstions"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16dp"
+            android:layout_marginLeft="4dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/Level5"
+            app:layout_constraintStart_toEndOf="@+id/flip5"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Level5"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="end|bottom"
+            android:text="lvl 2"
+            android:layout_marginRight="13dp"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayout5"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <FrameLayout
+            android:id="@+id/frameLayout5"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Name5">
+
+            <ProgressBar
+                android:id="@+id/levelProgressBar5"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:min="0"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:progress="70"
+                android:progressDrawable="@drawable/custom_progress"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/text_over_progress5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="3/5"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phase6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/flip6"
+            android:src="@drawable/instructions"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="13dp"
+            android:paddingBottom="3dp"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout6"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Name6"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="start|bottom"
+            android:singleLine="true"
+            android:text="Expressions"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16dp"
+            android:layout_marginLeft="4dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/Level6"
+            app:layout_constraintStart_toEndOf="@+id/flip6"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Level6"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="end|bottom"
+            android:text="lvl 2"
+            android:layout_marginRight="13dp"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayout6"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <FrameLayout
+            android:id="@+id/frameLayout6"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Name6">
+
+            <ProgressBar
+                android:id="@+id/levelProgressBar6"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:min="0"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:progress="70"
+                android:progressDrawable="@drawable/custom_progress"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/text_over_progress6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="3/5"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phase7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/flip7"
+            android:src="@drawable/expression"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="13dp"
+            android:paddingBottom="3dp"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout7"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Name7"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="start|bottom"
+            android:singleLine="true"
+            android:text="Instructions"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="16dp"
+            android:layout_marginLeft="4dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toStartOf="@+id/Level7"
+            app:layout_constraintStart_toEndOf="@+id/flip7"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Level7"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="end|bottom"
+            android:text="lvl 2"
+            android:layout_marginRight="13dp"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayout7"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <FrameLayout
+            android:id="@+id/frameLayout7"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Name7">
+
+            <ProgressBar
+                android:id="@+id/levelProgressBar7"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:min="0"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:progress="70"
+                android:progressDrawable="@drawable/custom_progress"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/text_over_progress7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="3/5"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"/>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

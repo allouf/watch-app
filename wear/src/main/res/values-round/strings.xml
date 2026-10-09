@@ -1,0 +1,4 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="hello_world">Hello Round World!</string>
+    <string name="hint_description" tools:ignore="ExtraTranslation">A brief description of purpose of the button</string>
+</resources>

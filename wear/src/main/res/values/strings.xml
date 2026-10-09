@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Incentives</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World first!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="entry_fragment">Waiting for other devices</string>
+    <string name="exit_fragment">Waiting for other devices</string>
+    <string name="title_activity_alarm">AlarmActivity</string>
+    <string name="title_activity_minigame_t1">MinigameT1</string>
+    <string name="title_activity_Notification">NotificationActivity</string>
+    <string name="MinigameState">MinigameState</string>
+    <string name="WasReminderShowing">WasReminderShowing</string>
+    <string name="ReminderScreenID">ReminderScreenID</string>
+    <string name="TimerRemainingSec_Primary">TimerRemainingSec_Primary</string>
+    <string name="ReminderTimes">ReminderTimes</string>
+    <string name="AvatarProfile">AvatarProfile</string>
+    <string name="Scores">Scores</string>
+    <string name="AlarmTypeOrdinal">AlarmTypeOrdinal</string>
+    <string name="AlarmSetTimeMillies">AlarmSetTimeMillies</string>
+    <string name="MinigameT1S5FragmentLabel">fragment_minigame_t1_s5</string>
+    <string name="WakeLockTagVal">QuestionGame::ReminderAlarm</string>
+
+    <string name="txtViewDesc1">txtViewDesc1</string>
+    <string name="txtViewDesc2">txtViewDesc2</string>
+    <string name="txtViewDesc3">txtViewDesc3</string>
+    <string name="txtViewDesc4">txtViewDesc4</string>
+    <string name="txtViewDesc5">txtViewDesc5</string>
+    <string name="txtViewDesc6">txtViewDesc6</string>
+    <string name="txtViewDesc7">txtViewDesc7</string>
+    <string name="txtViewDesc8">txtViewDesc8</string>
+    <string name="txtViewDesc9">txtViewDesc9</string>
+    <string name="txtViewDesc10">txtViewDesc10</string>
+    <string name="txtViewDesc11">txtViewDesc11</string>
+
+    <string name="screens1">screens1</string>
+    <string name="screens2">screens2</string>
+    <string name="screens3">screens3</string>
+    <string name="screens4">screens4</string>
+    <string name="screens5">screens5</string>
+    <string name="screens6">screens6</string>
+    <string name="screens7">screens7</string>
+    <string name="screens8">screens8</string>
+    <string name="screens9">screens9</string>
+    <string name="screens10">screens10</string>
+    <string name="screens11">screens11</string>
+
+    <string name="rem1">rem1</string>
+    <string name="rem2">rem2</string>
+    <string name="rem3">rem3</string>
+    <string name="rem4">rem4</string>
+    <string name="rem5">rem5</string>
+    <string name="rem6">rem6</string>
+    <string name="rem7">rem7</string>
+    <string name="rem8">rem8</string>
+    <string name="rem9">rem9</string>
+    <string name="rem10">rem10</string>
+    <string name="rem11">rem11</string>
+
+    <string name="currLable">currLable</string>
+    <string name="algoDescription">algoDescription</string>
+    <string name="algoTitle">algoTitle</string>
+    <string name="totalRun">totalRun</string>
+    <string name="totalCompleted">totalCompleted</string>
+    <string name="totalStopped">totalStopped</string>
+    <string name="totalRemindersRecieved">totalRemindersRecieved</string>
+    <string name="totalTime">totalTime</string>
+    <string name="totalAlgos">totalAlgos</string>
+    <string name="GtotalRun">GtotalRun</string>
+    <string name="GtotalCompleted">GtotalCompleted</string>
+    <string name="GtotalStopped">GtotalStopped</string>
+    <string name="GtotalTime">GtotalTime</string>
+
+    <string name="selectedTypeRec">selectedTypeRec</string>
+
+    <string name="primaryTimerDurString">primaryTimerDurString</string>
+    <string name="totalRemindersString">totalRemindersString</string>
+
+    <string name="lastShowenReminder">lastShowenReminder</string>
+    <string name="lastShowenImage">lastShowenImage</string>
+
+    <string name="RemindersData">RemindersData</string>
+
+
+    <string name="channel_name">Incentives</string>
+    <string name="channel_description">Incentives Channel</string>
+    <string name="start_recording_button">Start Recording</string>
+    <string name="stop_recording_button">Stop Recording</string>
+    <string name="LastInteractionTime">Last Interaction Time</string>
+
+</resources>

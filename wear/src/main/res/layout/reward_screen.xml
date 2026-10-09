@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.incentives.prototype.CustomScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="2dp"
+    android:id="@+id/scrollViewT1S1"
+    tools:context=".minigameT1.RewardFragment"
+    android:paddingRight="2dp">
+
+        <LinearLayout
+            android:id="@+id/layout_content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/avatar_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="Andrius"
+                            android:textStyle="bold"
+                            android:textSize="16dp"
+                            android:fontFamily="@font/roboto"
+                            android:textColor="@color/white"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/avatar"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            app:civ_border_color="#FF000000"
+                            app:civ_border_width="2dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/avatar_name" />
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:id="@+id/arrowBtn"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="bottom|end"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.014"
+                            app:layout_constraintStart_toStartOf="@+id/avatar"
+                            app:layout_constraintTop_toTopOf="@+id/avatar"
+                            app:layout_constraintVertical_bias="0.622"
+                            app:lottie_fileName="right-arrow-white.json" />
+
+                        <TextView
+                            android:id="@+id/tmpView"
+                            android:layout_width="44dp"
+                            android:layout_height="36dp"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="10dp"
+                            android:text="invisible view"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:visibility="invisible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.088"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/arrowBtn" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/phase">
+
+                        <TextView
+                            android:id="@+id/label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start|bottom"
+                            android:singleLine="true"
+                            android:text="Creativity"
+                            android:textColor="@color/white"
+                            android:textFontWeight="500"
+                            android:textSize="16dp"
+                            android:textStyle="normal"
+                            app:layout_constraintBottom_toTopOf="@+id/levelProgressBar"
+                            app:layout_constraintStart_toStartOf="@+id/levelProgressBar"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="end|bottom"
+                            android:textSize="16dp"
+                            android:text="50%"
+                            android:textColor="@color/green"
+                            app:layout_constraintBottom_toTopOf="@+id/levelProgressBar"
+                            app:layout_constraintEnd_toEndOf="@+id/levelProgressBar"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ProgressBar
+                            android:id="@+id/levelProgressBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="140dp"
+                            android:layout_height="12dp"
+                            android:layout_centerHorizontal="true"
+                            android:min="0"
+                            android:progress="70"
+                            android:progressDrawable="@drawable/custom_progress"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/label" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </com.incentives.prototype.CustomScrollView>
+

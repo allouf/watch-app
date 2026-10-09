@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".minigameT1.MinigameT1S5Fragment"
+    android:background="@color/black">
+    <!--app:boxedEdges="all"-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp">
+        <pl.droidsonroids.gif.GifImageView
+            android:src="@drawable/nodesconnecting"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_width="wrap_content"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="228dp"
+            android:layout_gravity="center">
+
+
+            <Button
+                android:id="@+id/btnYes"
+                android:layout_width="47dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="16dp"
+                android:background="@android:color/transparent"
+                android:text="YES"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnToT1S1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.824"></Button>
+
+            <Button
+                android:id="@+id/btnYesInv"
+                android:layout_width="50dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="16dp"
+                android:background="@android:color/transparent"
+                android:text="YES"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnToT1S1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.213"></Button>
+
+            <Button
+                android:id="@+id/btnNo"
+                android:layout_width="45dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                android:text="NO"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnToT1S1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.847"></Button>
+
+            <Button
+                android:id="@+id/btnNoInv"
+                android:layout_width="48dp"
+                android:layout_height="39dp"
+                android:layout_marginEnd="24dp"
+                android:background="@android:color/transparent"
+                android:text="NO"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnToT1S1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.213"></Button>
+
+            <ImageButton
+                android:id="@+id/btnToT1S1"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow"
+                android:gravity="bottom"
+                android:paddingTop="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"></ImageButton>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="137dp"
+                android:layout_height="56dp"
+                android:layout_marginBottom="64dp"
+                android:fontFamily="@font/naujas"
+                android:text="Are you ready to connect the ideas?"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnToT1S1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</androidx.wear.widget.BoxInsetLayout>

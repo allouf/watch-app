@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.incentives.prototype.CustomScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".minigameT1.MinigameT1S3Fragment"
+    android:id="@+id/scrollViewT1S3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:orientation="vertical" >
+
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Mini - Game"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="170dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"></View>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000" />
+        <TextView
+            android:id="@+id/TitleTitleView"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Title"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:lineSpacingExtra="4sp"
+            android:letterSpacing="0.025"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TitleContentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            tools:ignore="MissingPrefix" />
+
+        <ImageButton
+            android:id="@+id/btnToT1S4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/TitleContentView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="bottom|center"
+            android:background="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/progressionText"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Progression"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="18sp"
+            android:layout_marginLeft="13dp"
+            android:layout_below="@id/btnToT1S4"
+             />
+
+        <View
+            android:layout_width="170dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"></View>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animatedArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="57dp"
+            app:layout_constraintLeft_toRightOf="@id/progressionText"
+            app:lottie_fileName="right-arrow-white.json" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/animatedArrow">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@android:color/darker_gray"
+                app:tabIndicatorColor="@color/colorPrimary"
+                app:tabTextColor="@color/colorPrimary" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/titleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:text="Total Time"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="#F7E559"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/TimeView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:text="43D 34H 56M"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="#F7E559"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/AnalyticsText"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Analytics"
+            android:textColor="@color/white"
+            android:textFontWeight="500"
+            android:textSize="18sp"
+            android:layout_below="@id/btnToT1S4"
+            />
+
+        <View
+            android:layout_width="170dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"></View>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/CompletionRatingTitle"
+                android:layout_width="110dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="28dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="start"
+                android:textColor="@color/white"
+                android:singleLine="false"
+                android:text="Completion Rating"
+                android:textFontWeight="500"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/CompletionRatingValue"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/CompletionRatingValue"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_gravity="center"
+                android:text="52%"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:gravity="end|bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.849"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/CompletionRatingProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="200dp"
+                android:layout_height="12dp"
+                android:layout_centerHorizontal="true"
+                android:min="0"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:progressDrawable="@drawable/custom_progress"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CompletionRatingTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/totalRun"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="start|bottom"
+                android:singleLine="false"
+                android:text="Total Run"
+                android:textColor="@color/white"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/totalRunValue"
+                app:layout_constraintHorizontal_bias="0.383"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalRunValue"
+                android:layout_width="40dp"
+                android:layout_height="33dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:gravity="end|bottom"
+                android:text="7"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.849"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/totalCompleted"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="start|bottom"
+                android:singleLine="false"
+                android:text="Total Completed"
+                android:textColor="@color/white"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/totalCompletedValue"
+                app:layout_constraintHorizontal_bias="0.383"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalCompletedValue"
+                android:layout_width="40dp"
+                android:layout_height="33dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:gravity="end|bottom"
+                android:text="5"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.849"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/totalStopped"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="start|bottom"
+                android:singleLine="false"
+                android:text="Total Stopped"
+                android:textColor="@color/white"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/totalStoppedValue"
+                app:layout_constraintHorizontal_bias="0.383"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalStoppedValue"
+                android:layout_width="40dp"
+                android:layout_height="33dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:gravity="end|bottom"
+                android:text="2"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.849"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/EngagmentRatingTitle"
+                android:layout_width="110dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="28dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="start"
+                android:textColor="@color/white"
+                android:singleLine="false"
+                android:text="Engagement Rating"
+                android:textFontWeight="500"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/EngagmentRatingValue"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/EngagmentRatingValue"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_gravity="center"
+                android:text="80%"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:gravity="end|bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.849"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/EngagmentRatingProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="200dp"
+                android:layout_height="12dp"
+                android:layout_centerHorizontal="true"
+                android:min="0"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:progressDrawable="@drawable/custom_progress"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/EngagmentRatingTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/totalRemindersReceived"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="start|bottom"
+                android:singleLine="false"
+                android:text="Total Reminders Received"
+                android:textColor="@color/white"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/totalRemindersReceivedValue"
+                app:layout_constraintHorizontal_bias="0.383"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalRemindersReceivedValue"
+                android:layout_width="40dp"
+                android:layout_height="33dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:gravity="end|bottom"
+                android:text="66"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.849"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/totalHints"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="start|bottom"
+                android:singleLine="false"
+                android:text="Total AI-Hints"
+                android:textColor="@color/white"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/totalHintsValue"
+                app:layout_constraintHorizontal_bias="0.383"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalHintsValue"
+                android:layout_width="40dp"
+                android:layout_height="33dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:gravity="end|bottom"
+                android:text="43"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.849"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/totalIdeasCaptured"
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="start|bottom"
+                android:singleLine="false"
+                android:text="Total Ideas Captured"
+                android:textColor="@color/white"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/totalIdeasCapturedValue"
+                app:layout_constraintHorizontal_bias="0.383"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/totalIdeasCapturedValue"
+                android:layout_width="40dp"
+                android:layout_height="33dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:gravity="end|bottom"
+                android:text="43"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.849"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        <TextView
+            android:id="@+id/tmp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:text="43D 34H 56M"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"/>
+    </LinearLayout>
+</com.incentives.prototype.CustomScrollView>

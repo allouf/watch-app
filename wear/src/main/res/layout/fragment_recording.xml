@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.incentives.prototype.CustomScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_recording"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="7dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="back"
+            android:src="@drawable/left_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tap_to_speak_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="Talk"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.073" />
+
+        <ImageView
+            android:id="@+id/center_image"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:src="@drawable/sam"
+            android:layout_marginTop="3dp"
+            android:foregroundGravity="center"
+            app:layout_constraintBottom_toTopOf="@id/mic_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tap_to_speak_text"
+            />
+
+        <ImageView
+            android:id="@+id/overlay_image"
+            android:layout_width="56dp"
+            android:layout_height="42dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/thinking_cloud"
+            app:layout_constraintBottom_toBottomOf="@+id/center_image"
+            app:layout_constraintEnd_toEndOf="@+id/center_image"
+            app:layout_constraintHorizontal_bias="0.198"
+            app:layout_constraintStart_toStartOf="@+id/center_image"
+            app:layout_constraintTop_toTopOf="@+id/center_image"
+            android:visibility="gone"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="20sp"
+            android:layout_marginStart="120dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/center_image"
+            app:layout_constraintEnd_toEndOf="@id/center_image"
+            app:layout_constraintStart_toStartOf="@id/center_image"
+            app:layout_constraintTop_toTopOf="@id/center_image"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/mic_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:scaleX="2.3"
+            android:scaleY="2.3"
+            android:src="@drawable/microphone2"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/center_image" />
+
+
+<!--        <TextView
+            android:id="@+id/recording_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/mic_button"
+            app:layout_constraintBottom_toTopOf="@id/buttons_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recording_status">
+
+        <ImageButton
+            android:id="@+id/done_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerCrop"
+            android:scaleY="1"
+            android:scaleX="1"
+            android:src="@drawable/done"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/cancel_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerCrop"
+            android:scaleY="1"
+            android:scaleX="1"
+            android:src="@drawable/cancel"
+            android:layout_marginStart="5dp"
+            android:background="@android:color/transparent" />
+    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</com.incentives.prototype.CustomScrollView>

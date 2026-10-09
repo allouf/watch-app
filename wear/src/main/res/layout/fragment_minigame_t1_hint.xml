@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.incentives.prototype.CustomScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".minigameT1.HintFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        `<FrameLayout
+        android:id="@+id/title_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hint:"
+            android:textColor="#E5F813"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/title_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/question"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/middle_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_container">
+
+            <TextView
+                android:id="@+id/hint_data"
+                android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:lineSpacingMultiplier="1.5"
+            android:minHeight="80dp"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbars="vertical"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="#E5F813"
+            android:textSize="17sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/animationView_loading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="16dp" />
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView_loading"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:lottie_fileName="brain-idea.json" />
+
+            <LinearLayout
+                android:id="@+id/button_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageButton
+                    android:id="@+id/toPager"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/arrow_down" />
+
+                <ImageButton
+                    android:id="@+id/regenerate"
+                    android:layout_width="40dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="-20dp"
+                    android:background="@drawable/refresh_button" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.incentives.prototype.CustomScrollView>

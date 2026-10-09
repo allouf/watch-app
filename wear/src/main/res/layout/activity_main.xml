@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".MainActivity"
+    tools:deviceIds="wear">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contentMain">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="208dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="10dp"
+            android:text="Main Menu"
+            android:layout_marginLeft="12dp"
+            android:fontFamily="@font/roboto_medium"
+
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:textFontWeight="500"
+            android:gravity="bottom|center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="155dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="60dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/txtTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/recycler_view"></View>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="3dp"
+            android:id="@+id/recycler_view"
+            android:layout_width="183dp"
+            android:layout_height="141dp"
+            android:background="#000"
+            android:divider="?android:absListViewStyle"
+            android:padding="5dp"
+            android:scrollbars="vertical"
+            android:showDividers="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.wear.widget.BoxInsetLayout>

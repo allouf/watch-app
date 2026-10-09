@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".minigameT1.MinigameT1RIdle"
+    android:id="@+id/layout_content2"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/currentScoreInf"
+            android:layout_width="40dp"
+            android:layout_height="21dp"
+            android:elevation="5dp"
+            android:fontFamily="casual"
+            android:text="Score"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.337"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.106" />
+
+        <TextView
+            android:id="@+id/scoreInf"
+            android:layout_width="31dp"
+            android:layout_height="18dp"
+            android:elevation="5dp"
+            android:fontFamily="casual"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.099"
+            app:layout_constraintStart_toEndOf="@+id/currentScoreInf"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.103"
+            tools:ignore="MissingConstraints" />
+
+        <ProgressBar
+            android:id="@+id/simpleProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="162dp"
+            android:layout_height="13dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="32dp"
+            android:elevation="5dp"
+            android:min="0"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/custom_progress"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtViewTimer"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/waifuInf"
+            android:layout_width="210dp"
+            android:layout_height="146dp"
+            android:background="#000000"
+            android:contentDescription="@string/app_name"
+            android:elevation="4dp"
+            android:padding="0dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.753" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/hintAnimation"
+            android:layout_width="110dp"
+            android:layout_height="75dp"
+            android:elevation="8dp"
+            android:visibility="gone"
+            app:lottie_fileName="double-tap.json"
+            app:layout_constraintBottom_toBottomOf="@id/waifuInf"
+            app:layout_constraintEnd_toEndOf="@id/waifuInf"
+            app:layout_constraintStart_toStartOf="@id/waifuInf"
+            app:layout_constraintTop_toTopOf="@id/waifuInf" />
+
+        <LinearLayout
+            android:id="@+id/layout_sprite"
+            android:layout_width="32dp"
+            android:layout_height="19dp"
+            android:background="#000000"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scaleType="fitXY"
+            android:showDividers="middle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/scoreInf"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.105">
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/youwonMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOU WON!"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rewardLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/rewardAnimationView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="diamond.json"
+            app:lottie_loop="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/rewardTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="REWARD"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginStart="0dp"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rewardAnimationView"
+            app:layout_constraintBottom_toBottomOf="@+id/rewardAnimationView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/rewardAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/avatar_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:fontFamily="@font/roboto"
+                    android:layout_marginTop="10dp"
+                    android:text="Andrius"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:civ_border_color="#FF000000"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/avatar_name" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/smallReward"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:visibility="gone"
+                    android:layout_gravity="bottom|end"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.152"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/avatar"
+                    app:layout_constraintVertical_bias="0.727"
+                    app:lottie_fileName="diamond.json" />
+
+                <com.incentives.prototype.minigameT1.FullScreenCircularProgressView
+                    android:id="@+id/circularProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <TextView
+                    android:id="@+id/rewardValueView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|end"
+                    android:text="+20"
+                    android:textColor="@color/green"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.85"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/avatar_name"
+                    app:layout_constraintVertical_bias="0.745" />
+
+                <TextView
+                    android:id="@+id/selectedBarPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="+20"
+                    android:textColor="@color/green"
+                    android:textSize="26dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.813"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/avatar_name"
+                    app:layout_constraintVertical_bias="0.675" />
+
+                <TextView
+                    android:id="@+id/selectedBar"
+                    android:layout_width="109dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:fontFamily="@font/roboto_medium"
+                    android:maxLines="2"
+                    android:text="+20"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.338"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/avatar_name"
+                    app:layout_constraintVertical_bias="0.681" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</LinearLayout>
+
+
+
+

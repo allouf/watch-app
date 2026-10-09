@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/minigame_t1_navigation"
+    app:startDestination="@id/fragment_minigame_t1_s1">
+    <fragment
+        android:id="@+id/fragment_minigame_t1_s1"
+        android:name="com.incentives.prototype.minigameT1.MinigameT1S1Fragment"
+        android:label="Minigame T1 S1"
+        tools:layout="@layout/fragment_minigame_t1_s1" >
+        <action
+            android:id="@+id/action_fragment_minigame_t1_s1_to_fragment_minigame_t1_s2"
+            app:destination="@id/fragment_minigame_t1_s2"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"/>
+        <action
+            android:id="@+id/action_fragment_minigame_t1_s1_to_minigameT1RPre"
+            app:destination="@id/minigameT1RPre"
+            app:popUpTo="@id/fragment_minigame_t1_s1"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_minigame_t1_s2"
+        android:name="com.incentives.prototype.minigameT1.MinigameT1S2Fragment"
+        android:label="Minigame T1 S2"
+        tools:layout="@layout/fragment_minigame_t1_s2" >
+        <action
+            android:id="@+id/action_fragment_minigame_t1_s2_to_minigameT1S3Fragment2"
+            app:destination="@id/fragment_minigame_t1_s3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_minigame_t1_s3"
+        android:name="com.incentives.prototype.minigameT1.MinigameT1S3Fragment"
+        android:label="fragment_minigame_t1_s3"
+        tools:layout="@layout/fragment_minigame_t1_s3" >
+        <action
+            android:id="@+id/action_fragment_minigame_t1_s3_to_fragment_minigame_t1_s2"
+            app:destination="@id/fragment_minigame_t1_s2"
+            app:enterAnim="@anim/slide_from_left"
+            app:exitAnim="@anim/slide_to_right"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_fragment_minigame_t1_s3_to_fragment_minigame_t1_s4"
+            app:destination="@id/fragment_minigame_t1_s4"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_minigame_t1_s4"
+        android:name="com.incentives.prototype.minigameT1.MinigameT1S4Fragment"
+        android:label="fragment_minigame_t1_s4"
+        tools:layout="@layout/fragment_minigame_t1_s4" >
+        <action
+            android:id="@+id/action_fragment_minigame_t1_s4_to_minigameT1S5Fragment"
+            app:destination="@id/minigameT1S5Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/minigameT1S5Fragment"
+        android:name="com.incentives.prototype.minigameT1.MinigameT1S5Fragment"
+        android:label="@string/MinigameT1S5FragmentLabel"
+        tools:layout="@layout/fragment_minigame_t1_s5" >
+        <action
+            android:id="@+id/action_minigameT1S5Fragment_to_fragment_minigame_t1_s1"
+            app:destination="@id/fragment_minigame_t1_s1" />
+    </fragment>
+    <fragment
+        android:id="@+id/minigameT1F1"
+        android:name="com.incentives.prototype.minigameT1.MinigameT1F1"
+        android:label="Feedback"
+        tools:layout="@layout/fragment_minigame_t1_f1" >
+        <action
+            android:id="@+id/action_minigameT1F1_to_minigameT1S5Fragment"
+            app:destination="@id/minigameT1S5Fragment" />
+        <argument
+            android:name="FeedbackType"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_minigameT1F1_to_exitFragment"
+            app:destination="@id/exitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/minigameT1R1"
+        android:name="com.incentives.prototype.minigameT1.MinigameT1R1"
+        android:label="fragment_minigame_t1_r1"
+        tools:layout="@layout/fragment_minigame_t1_r1" >
+        <action
+            android:id="@+id/action_minigameT1R1_to_minigameT1FPre"
+            app:destination="@id/minigameT1FPre" />
+        <argument
+            android:name="causeReminder"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <action
+            android:id="@+id/action_minigameT1R1_to_pagerFragment"
+            app:destination="@id/pagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/minigameT1Score"
+        android:name="com.incentives.prototype.minigameT1.MinigameT1Score"
+        android:label="fragment_minigame_t1_score"
+        tools:layout="@layout/fragment_minigame_t1_score" >
+        <action
+            android:id="@+id/action_minigameT1Score_to_fragment_minigame_t1_s1"
+            app:destination="@id/fragment_minigame_t1_s1" />
+    </fragment>
+    <fragment
+        android:id="@+id/minigameT1RPre"
+        android:name="com.incentives.prototype.minigameT1.MinigameT1RPre"
+        tools:layout="@layout/fragment_minigame_t1_r_pre_prompt"
+        android:label="MinigameT1RPrePrompt" >
+        <action
+            android:id="@+id/action_minigameT1RPre_to_minigameT1ENTRY"
+            app:destination="@id/entryFragment" />
+        <action
+            android:id="@+id/action_minigameT1RPre_to_minigameT1RPreNo"
+            app:destination="@id/minigameT1RPreNo" />
+        <action
+            android:id="@+id/action_minigameT1RPre_to_minigameT1RIdle"
+            app:destination="@id/minigameT1RIdle" />
+    </fragment>
+    <fragment
+        android:id="@+id/minigameT1RPreNo"
+        android:name="com.incentives.prototype.minigameT1.MinigameT1RPreNo"
+        android:label="MinigameT1RPreNo"
+        tools:layout="@layout/fragment_minigame_t1_r_pre_no">
+        <action
+            android:id="@+id/action_minigameT1RPreNo_to_fragment_minigame_t1_s1"
+            app:destination="@id/fragment_minigame_t1_s1"
+            app:popUpTo="@id/minigameT1RPreNo"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/minigameT1FPre"
+        android:name="com.incentives.prototype.minigameT1.MinigameT1FPre"
+        android:label="fragment_minigame_t1_f_pre"
+        tools:layout="@layout/fragment_minigame_t1_f_pre" >
+        <action
+            android:id="@+id/action_minigameT1FPre_to_minigameT1F1"
+            app:destination="@id/minigameT1F1" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_minigameT1RPre"
+        app:destination="@id/minigameT1RPre"
+        app:popUpTo="@id/minigameT1RPre"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_minigameT1S1"
+        app:destination="@id/fragment_minigame_t1_s1"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/minigameT1RPre"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/entryFragment"
+        android:name="com.incentives.prototype.minigameT1.EntryFragment"
+        android:label="fragment_entry"
+        tools:layout="@layout/fragment_entry" >
+    </fragment>
+    <fragment
+        android:id="@+id/exitFragment"
+        android:name="com.incentives.prototype.minigameT1.ExitFragment"
+        android:label="fragment_exit"
+        tools:layout="@layout/fragment_exit" />
+    <fragment
+        android:id="@+id/minigameT1RIdle"
+        android:name="com.incentives.prototype.minigameT1.MinigameT1RIdle"
+        android:label="fragment_minigame_t1_r_idle"
+        tools:layout="@layout/fragment_minigame_t1_r_idle" >
+        <action
+            android:id="@+id/action_minigameT1RIdle_to_minigameT1R1"
+            app:destination="@id/minigameT1R1" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagerFragment"
+        android:name="com.incentives.prototype.minigameT1.PagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_pagerFragment_to_minigameT1FPre"
+            app:destination="@id/minigameT1FPre" />
+        <action
+            android:id="@+id/action_pagerFragment_to_menu"
+            app:destination="@id/pagerMenu" />
+        <action
+            android:id="@+id/action_pagerFragment_to_hint"
+            app:destination="@id/pagerHint" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagerMenu"
+        android:name="com.incentives.prototype.minigameT1.MenuFragment"
+        android:label="Menu"
+        tools:layout="@layout/fragment_minigame_t1_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_pagerFragment"
+            app:destination="@id/pagerFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_ticFragment"
+            app:destination="@id/ticAnimation" />
+        <action
+            android:id="@+id/action_menuFragment_to_generateFragment"
+            app:destination="@id/generateMenu" />
+        <action
+            android:id="@+id/action_menuFragment_to_answerFragment"
+            app:destination="@id/answerMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/generateMenu"
+        android:name="com.incentives.prototype.minigameT1.GenerateFragment"
+        android:label="Generate Menu"
+        tools:layout="@layout/fragment_minigame_t1_generate" >
+        <action
+            android:id="@+id/action_generateFragment_to_menuFragment"
+            app:destination="@id/pagerMenu" />
+        <action
+            android:id="@+id/action_generateFragment_to_ticFragment"
+            app:destination="@id/ticAnimation" />
+        <action
+            android:id="@+id/action_showRecordingFragment"
+            app:destination="@id/recordingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ticAnimation"
+        android:name="com.incentives.prototype.minigameT1.AnimationFragment"
+        android:label="Tic"
+        tools:layout="@layout/fragment_animation" >
+        <action
+            android:id="@+id/action_ticFragment_to_Pager"
+            app:destination="@id/pagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionInput"
+        android:name="com.incentives.prototype.minigameT1.questionInputFragment"
+        android:label="Question Input"
+        tools:layout="@layout/fragment_question_input" >
+        <action
+            android:id="@+id/action_questionInputFragment_to_Pager"
+            app:destination="@id/pagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagerHint"
+        android:name="com.incentives.prototype.minigameT1.HintFragment"
+        android:label="Hint"
+        tools:layout="@layout/fragment_minigame_t1_hint" >
+        <action
+            android:id="@+id/action_hintFragment_to_Pager"
+            app:destination="@id/pagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerMenu"
+        android:name="com.incentives.prototype.minigameT1.AnswerFragment"
+        android:label="Answer Menu"
+        tools:layout="@layout/fragment_minigame_t1_answer" >
+        <action
+            android:id="@+id/action_answerFragment_to_menuFragment"
+            app:destination="@id/pagerMenu" />
+        <action
+            android:id="@+id/action_showRecordingFragment"
+            app:destination="@id/recordingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordingFragment"
+        android:name="com.incentives.prototype.minigameT1.RecordingFragment"
+        android:label="fragment_recording">
+        <action
+            app:destination="@+id/answerMenu"
+            android:id="@+id/action_showRecordingFragment"
+            app:enterAnim="@anim/flip_in"
+            app:exitAnim="@anim/flip_out" />
+        <action
+            app:destination="@+id/pagerHint"
+            android:id="@+id/action_pagerHint"
+            app:enterAnim="@anim/flip_in"
+            app:exitAnim="@anim/flip_out" />
+    </fragment>
+</navigation>

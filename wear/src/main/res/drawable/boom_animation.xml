@@ -1,0 +1,11 @@
+<!-- chest_animation.xml -->
+<animation-list android:oneshot="true" xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/boom0" android:duration="250" />
+    <item android:drawable="@drawable/boom1" android:duration="250" />
+    <item android:drawable="@drawable/boom2" android:duration="250" />
+    <item android:drawable="@drawable/boom3" android:duration="250" />
+    <item android:drawable="@drawable/boom4" android:duration="250" />
+    <item android:drawable="@drawable/boom5" android:duration="250" />
+    <item android:drawable="@drawable/boom6" android:duration="250" />
+    <item android:drawable="@drawable/boom7" android:duration="250" />
+</animation-list>

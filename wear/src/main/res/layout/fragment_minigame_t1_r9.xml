@@ -1,0 +1,80 @@
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="0dp"
+    tools:context=".minigameT1.MinigameT1R1"
+    android:id="@+id/layout_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollViewT1r">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linearLayoutT1r">
+
+            <TextView
+                android:id="@+id/txtViewDesc9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textAlignment="center"
+                android:text="Top TextView"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:elevation="4dp"/>
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_view"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="fill"
+                android:scaleType="fitCenter"
+                android:scaleX="1.2"
+                android:scaleY="1.2"
+                app:lottie_loop="true"
+                />
+
+<!--            <Button-->
+<!--                android:id="@+id/btnToPager"-->
+<!--                android:layout_width="66dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_marginTop="0dp"-->
+<!--                android:text="Open"-->
+<!--                android:textSize="12sp" />-->
+
+            <TextView
+                android:id="@+id/txtViewBot9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:lineSpacingMultiplier="1.5"
+                android:gravity="center_horizontal"
+                android:scrollbars="vertical"
+                android:text="Bottom TextView"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.wear.widget.BoxInsetLayout>

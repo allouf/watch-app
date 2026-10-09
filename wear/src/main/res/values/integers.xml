@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="primaryTimerDurSecMinigameT1">180</integer>
+    <integer name="totalRemindersToShow">3</integer>
+    <integer name="delayMilSecToFeedbackScreen">500</integer>
+    <integer name="delayMilSecFromReminderToSelfScoreScreen">5000</integer>
+    <integer name="delayMilSecFromFeedbackToSelfScoreScreen">4000</integer>
+    <integer name="vibrationDurationMilliSec">200</integer>
+    <!--<integer name="delaySecTimeToAnswerQuest">360</integer>-->
+    <!--<integer name="delaySecTimeToShowFeedback">5</integer>-->
+    <integer name="delaySecToWakeWhenWaitingForUser">120</integer>
+    <!--<integer name="delaySecDefaultToWakeWhenSecondaryTimerRunning">360</integer>-->
+</resources>

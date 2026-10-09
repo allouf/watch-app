@@ -1,0 +1,11 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+include ':wear'
+include ':mobile'
+rootProject.name = "My Application"
